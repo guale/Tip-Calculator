@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src = "listScript.js" async defer></script>
+    <script src = "placeHolder.js" async defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <title>To Do List</title>
     <link rel="stylesheet" href="style.css">
-    
+    <title>Tip Calculator</title>
+  
 </head>
 <body>
 <header id="main-header" class="bg-success text-white p-4 mb-3">
@@ -24,9 +24,12 @@
         <div id="main" class="card card-body">
             <h2 class="title">Tip Calc Form</Form></h2>
             <form id="addForm" class="form-inline mb-3">
+                    <label for="bill">Total Bill</label>
                     <input type="number" class="form-control mr-2" id="bill">
+                    <labal for="guest">Number of Guests</labal>
                     <input type="number" class="form-control mr-3" id="guest">
-                <select id = "quality" class="form-control mr-2"><p>Service Quality</p>
+                <label for="quality">Quality of Service</label>
+                <select id="quality" class="form-control mr-2">
                     <option value="1">Poor</option>
                     <option value="2">Marginal</option>
                     <option value="3">Average</option>
@@ -45,6 +48,7 @@
                 <li id ="tipTotal" class="list-group-item">Dummy element</li>
             <div id="output"></div>
             <br>
+            <button id="clear" class="btn btn-dark">CLEAR FORM FIELDS</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

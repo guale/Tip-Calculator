@@ -1,0 +1,45 @@
+#header-title{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 45px;
+}
+body{
+    background-color: beige;
+    font-size: 3.0 rem;
+
+}
+.bg-success{
+    background-color: rgb(3, 61, 109)!important;
+}
+h2.title{
+    font-size: 30px;
+    font-family:monospace;
+    letter-spacing: .5px;
+    color: rgb(36, 11, 11);
+
+}
+.list-group{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.btn{
+    display: inline-block;
+    padding: 8px 10px;
+    font-size: 20px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #051b38;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px rgb(129, 127, 127);
+}
+
+.btn:hover {background-color: #192461}
+
+.btn:active {
+    background-color: #0c47a7;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+

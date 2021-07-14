@@ -21,26 +21,26 @@
     <div class="container">
         <div id="main" class="card card-body">
             <h2 class="title">Tip Calc Form</Form></h2>
-            <div id ="addFormHeader" class="form-inline mb-3">
-                <label for="billInput" class="form-control mr-2">Total Bill</label><p>can't figure out how to space this</p>
-                <label for="guestInput" class="form-control px-2"># of Guests</label>
-            </div>
             <form id="addForm" class="form-inline mb-3">
-                <input type="number" class="form-control mr-2" id="bill">
-                <input type="number" class="form-control mr-3" id="guest">
+                    <input type="number" class="form-control mr-2" id="bill">
+                    <input type="number" class="form-control mr-3" id="guest">
+                <select id = "quality" class="form-control mr-2"><p>Service Quality</p>
+                    <option value="1">Poor</option>
+                    <option value="2">Marginal</option>
+                    <option value="3">Average</option>
+                    <option value="4">Good</option>
+                    <option value="5">Excellent</option>
+                    <option value="6">Outstanding</option>
+                </select>
                 <input type="submit" class="btn btn-dark" value="calculate">
             </form>
-            <label for="service">Quality of Service
-                <input type="radio" id="html" name="fav_language" value="HTML">1
-                <input type="radio" id="html" name="fav_language" value="HTML">2
-                <input type="radio" id="html" name="fav_language" value="HTML">3
-                <input type="radio" id="html" name="fav_language" value="HTML">4
-                <input type="radio" id="html" name="fav_language" value="HTML">5
- a           </lbel>
-            <h2 class="title">Tip Output</h2>
-            <ul id="tip" class="list-group">
-                <li class="list-group-item">Test Element</li>
+            <h2 class="title">Tip Per Person Output</h2>
+            <ul class="list-group">
+                <li id ="tip" class="list-group-item">Dummy element</li>
             </ul>
+            <h2 class="title">Total Tip Output</h2>
+            <ul class="list-group">
+                <li id ="tipTotal" class="list-group-item">Dummy element</li>
             <div id="output"></div>
             <br>
         </div>

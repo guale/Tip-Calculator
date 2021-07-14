@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src = "placeHolder.js" async defer></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <script src= query.js async defer></script>
+    <script src= "tipcalc.js" async defer></script>
     <title>Tip Calculator</title>
   
 </head>
@@ -25,30 +26,30 @@
             <h2 class="title">Tip Calc Form</Form></h2>
             <form id="addForm" class="form-inline mb-3">
                     <label for="bill">Total Bill</label>
-                    <input type="number" class="form-control mr-2" id="bill">
+                    <input type="number" class="form-control mr-2" id="bill" value="100">
                     <labal for="guest">Number of Guests</labal>
-                    <input type="number" class="form-control mr-3" id="guest">
+                    <input type="number" class="form-control mr-3" id="guest" value="2">
                 <label for="quality">Quality of Service</label>
                 <select id="quality" class="form-control mr-2">
                     <option value="1">Poor</option>
                     <option value="2">Marginal</option>
-                    <option value="3">Average</option>
+                    <option value="3" selected>Average</option>
                     <option value="4">Good</option>
                     <option value="5">Excellent</option>
                     <option value="6">Outstanding</option>
                 </select>
-                <input type="submit" class="btn btn-dark" value="calculate">
             </form>
-            <h2 class="title">Tip Per Person Output</h2>
+            <button id="calculate" class="btn btn-dark">Calculate</button>
+            <h2 class="title">Tip Per Person</h2>
             <ul class="list-group">
-                <li id ="tip" class="list-group-item">Dummy element</li>
+                <li id ="tip" class="list-group-item"></li>
             </ul>
-            <h2 class="title">Total Tip Output</h2>
+            <h2 class="title">Total Tip</h2>
             <ul class="list-group">
-                <li id ="tipTotal" class="list-group-item">Dummy element</li>
+                <li id ="tipTotal" class="list-group-item"></li>
             <div id="output"></div>
             <br>
-            <button id="clear" class="btn btn-dark">CLEAR FORM FIELDS</button>
+            <button id="clear" class="btn btn-dark">Clear</button>
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

@@ -1,0 +1,16 @@
+Bill
+No of guests
+Quality of Service
+
+Calculate Button
+
+Total field
+
+
+
+
+
+Tip = Base 10% + (quality of service 1-5)*2% + if (guests >5) + 5%
+
+
+tip per person = tip / guests

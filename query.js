@@ -32,8 +32,10 @@ function calculate() {
 	}
 
 	if (tip.bill === "" || tip.numPep === "") {
-		alert("Please provide a numerical value for all fields");
-	} else {
+		alert("Please provide a numerical value for all fields.");
+	} else if(tip.numPep == 0){
+		alert("Number of Guests cannot be 0.")
+	}	else {
 		tip.tip = tip.tipTotal();
 
 		tip.tipEach = tip.tipPerPerson();

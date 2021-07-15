@@ -8,8 +8,8 @@ let tipEachOutput = document.querySelector("#tip");
 
 //Initialize output variables
 
-let tip = 0;
-let tipEach = 0;
+// let tip = 0;
+// let tipEach = 0;
 
 //Define each button on the page
 
@@ -21,20 +21,29 @@ let clearBtn = document.querySelector("#clear");
 calcBtn.addEventListener("click", calculate);
 
 function calculate() {
-	bill = billEntry.value;
-	numPep = numPepEntry.value;
-	quality = qualityEntry.value;
+	tip.bill = billEntry.value;
+	tip.numPep = numPepEntry.value;
+	tip.quality = qualityEntry.value;
 
-	if (bill === "" || numPep === "") {
+	//Adds an extra 5% gratuity for large parties
+
+	if (tip.numPep >= PARTY_SIZE) {
+		largeParty = tip.bill * 0.05;
+	}
+
+	if (tip.bill === "" || tip.numPep === "") {
 		alert("Please provide a numerical value for all fields");
 	} else {
-		tip = tipTotal();
+		tip.tip = tip.tipTotal();
 
-		tipEach = tipPerPerson();
+		tip.tipEach = tip.tipPerPerson();
 
-		tipEachOutput.innerText = "$" + tipEach;
-		tipOutput.innerText = "$" + tip;
+		tipEachOutput.innerText = "$" + tip.tipEach;
+		tipOutput.innerText = "$" + tip.tip;
 	}
+
+	console.log(tip);
+	console.log(largeParty);
 }
 
 //When the clear button is pressed all fields are replaced with an empty string

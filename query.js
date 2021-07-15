@@ -41,9 +41,6 @@ function calculate() {
 		tipEachOutput.innerText = "$" + tip.tipEach;
 		tipOutput.innerText = "$" + tip.tip;
 	}
-
-	console.log(tip);
-	console.log(largeParty);
 }
 
 //When the clear button is pressed all fields are replaced with an empty string

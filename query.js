@@ -20,6 +20,13 @@ let clearBtn = document.querySelector("#clear");
 
 calcBtn.addEventListener("click", calculate);
 
+
+//Formats input to proper USD with two decimal places
+let formatter = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  });
+
 function calculate() {
 	tip.bill = billEntry.value;
 	tip.numPep = numPepEntry.value;
@@ -29,6 +36,8 @@ function calculate() {
 
 	if (tip.numPep >= PARTY_SIZE) {
 		largeParty = tip.bill * 0.05;
+	} else{
+		largeParty = 0;
 	}
 
 	if (tip.bill === "" || tip.numPep === "") {
@@ -40,8 +49,9 @@ function calculate() {
 
 		tip.tipEach = tip.tipPerPerson();
 
-		tipEachOutput.innerText = "$" + tip.tipEach;
-		tipOutput.innerText = "$" + tip.tip;
+		//Formats the output to USD
+		tipEachOutput.innerText = formatter.format(tip.tipEach);
+		tipOutput.innerText = formatter.format(tip.tip);
 	}
 }
 
